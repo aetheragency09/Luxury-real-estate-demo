@@ -224,12 +224,14 @@
   });
 </script>
   <script>
+document.addEventListener("DOMContentLoaded", function() {
   const chatButton = document.getElementById("chatButton");
   const chatBox = document.getElementById("chatBox");
 
-  chatButton.addEventListener("click", () => {
+  chatButton.addEventListener("click", function() {
     chatBox.classList.toggle("hidden");
   });
+});
 </script>
   
 
