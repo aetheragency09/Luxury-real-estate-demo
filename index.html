@@ -185,16 +185,29 @@
     Book Consultation
   </button>
 </section>
-  <!-- AI CHAT DEMO BUTTON -->
+ <!-- AI CHAT DEMO BUTTON -->
 <div id="chatButton" class="fixed bottom-6 right-6 bg-white text-black px-5 py-3 rounded-full shadow-2xl cursor-pointer hover:scale-110 transition duration-300">
   💬 AI Assistant
 </div>
 
-<div id="chatBox" class="fixed bottom-20 right-6 w-72 bg-[#111] text-white p-4 rounded-xl shadow-2xl hidden">
+<div id="chatBox" class="fixed bottom-20 right-6 w-80 bg-[#111] text-white p-4 rounded-xl shadow-2xl hidden">
   <h4 class="font-bold mb-2">Aether AI</h4>
-  <p class="text-sm text-gray-400 mb-3">Hi 👋 How can I help you today?</p>
-  <button class="bg-white text-black px-3 py-2 rounded text-sm w-full hover:bg-gray-300 transition">
-    Book Consultation
+
+  <div id="chatMessages" class="text-sm text-gray-300 mb-3 h-32 overflow-y-auto">
+    <p class="mb-2">Hi 👋 How can I help you today?</p>
+  </div>
+
+  <input 
+    id="chatInput" 
+    type="text" 
+    placeholder="Ask about villas..." 
+    class="w-full px-3 py-2 rounded bg-black border border-gray-600 text-white text-sm mb-2"
+  >
+
+  <button 
+    id="sendBtn"
+    class="bg-white text-black px-3 py-2 rounded text-sm w-full hover:bg-gray-300 transition">
+    Send
   </button>
 </div>
   <script>
@@ -227,9 +240,26 @@
 document.addEventListener("DOMContentLoaded", function() {
   const chatButton = document.getElementById("chatButton");
   const chatBox = document.getElementById("chatBox");
+  const sendBtn = document.getElementById("sendBtn");
+  const chatInput = document.getElementById("chatInput");
+  const chatMessages = document.getElementById("chatMessages");
 
   chatButton.addEventListener("click", function() {
     chatBox.classList.toggle("hidden");
+  });
+
+  sendBtn.addEventListener("click", function() {
+    const userText = chatInput.value;
+    if (userText.trim() === "") return;
+
+    chatMessages.innerHTML += `<p class="mb-2 text-white">You: ${userText}</p>`;
+
+    setTimeout(() => {
+      chatMessages.innerHTML += `<p class="mb-2 text-gray-400">Aether AI: Our luxury villas start from $3.9M. Would you like a private consultation?</p>`;
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }, 800);
+
+    chatInput.value = "";
   });
 });
 </script>
