@@ -211,6 +211,26 @@
     appearOnScroll.observe(fader);
   });
 </script>
+  <script>
+  const chatButton = document.getElementById("chatButton");
+  const chatBox = document.getElementById("chatBox");
+
+  chatButton.addEventListener("click", () => {
+    chatBox.classList.toggle("hidden");
+  });
+</script>
+  <!-- AI CHAT DEMO BUTTON -->
+<div id="chatButton" class="fixed bottom-6 right-6 bg-white text-black px-5 py-3 rounded-full shadow-2xl cursor-pointer hover:scale-110 transition duration-300">
+  💬 AI Assistant
+</div>
+
+<div id="chatBox" class="fixed bottom-20 right-6 w-72 bg-[#111] text-white p-4 rounded-xl shadow-2xl hidden">
+  <h4 class="font-bold mb-2">Aether AI</h4>
+  <p class="text-sm text-gray-400 mb-3">Hi 👋 How can I help you today?</p>
+  <button class="bg-white text-black px-3 py-2 rounded text-sm w-full hover:bg-gray-300 transition">
+    Book Consultation
+  </button>
+</div>
 
 </body>
 </html>
