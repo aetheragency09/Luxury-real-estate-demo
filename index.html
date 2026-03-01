@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Luxury Dubai Estates</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: '#D4AF37',
+            darkbg: '#0B0B0F'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #0B0B0F;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 1.2s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .gold-glow {
+      text-shadow: 0 0 10px rgba(212, 175, 55, 0.7),
+                   0 0 20px rgba(212, 175, 55, 0.5);
+    }
+  </style>
+</head>
+
+<body class="text-white font-sans">
+
+<!-- NAVBAR -->
+<nav class="fixed w-full top-0 left-0 bg-black z-50 border-b border-gray-800">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold text-gold">LUXURY DUBAI ESTATES</h1>
+    <div class="space-x-6">
+      <a href="#" class="hover:text-gold">Properties</a>
+      <a href="#" class="hover:text-gold">About</a>
+      <a href="#" class="hover:text-gold">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="min-h-screen pt-24 flex flex-col justify-center items-center text-center px-6 fade-up">
+  <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+    Discover <span class="text-gold gold-glow">Luxury Living</span> In Dubai
+  </h1>
+  <p class="mt-6 text-gray-400 max-w-xl">
+    Exclusive waterfront villas, penthouses, and premium investment properties.
+  </p>
+  <button class="mt-8 px-8 py-3 border border-gold text-gold hover:bg-gold hover:text-black transition duration-300 hover:shadow-[0_0_20px_rgba(212,175,55,0.6)]">
+    View Properties
+  </button>
+</section>
+
+<!-- FEATURED PROPERTIES -->
+<section class="py-20 px-6 text-center bg-[#111111]">
+  <h2 class="text-3xl font-bold mb-12">Featured Properties</h2>
+
+  <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+    <div class="border border-gray-800 rounded-lg p-6">
+      <div class="h-48 bg-gray-800 rounded mb-4"></div>
+      <h3 class="text-xl text-gold mb-2">Palm Jumeirah Villa</h3>
+      <p class="text-gray-400">$4.5M • 5 Bedrooms • Waterfront</p>
+    </div>
+
+    <div class="border border-gray-800 rounded-lg p-6">
+      <div class="h-48 bg-gray-800 rounded mb-4"></div>
+      <h3 class="text-xl text-gold mb-2">Downtown Penthouse</h3>
+      <p class="text-gray-400">$2.8M • 3 Bedrooms • Skyline View</p>
+    </div>
+
+    <div class="border border-gray-800 rounded-lg p-6">
+      <div class="h-48 bg-gray-800 rounded mb-4"></div>
+      <h3 class="text-xl text-gold mb-2">Dubai Marina Apartment</h3>
+      <p class="text-gray-400">$1.9M • 2 Bedrooms • Marina View</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT CTA -->
+<section class="py-20 text-center">
+  <h2 class="text-3xl font-bold">Schedule A Private Viewing</h2>
+  <p class="text-gray-400 mt-4">Contact our luxury property specialist today.</p>
+  <button class="mt-8 px-10 py-4 bg-gold text-black font-semibold hover:opacity-80 transition duration-300">
+    Book Consultation
+  </button>
+</section>
+
+</body>
+</html>
