@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You | Aether Agency</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+    background: #0b0f19;
+    color: #fff;
+    font-family: 'Jost', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 24px;
+}
+body::before {
+    content:'';
+    position:fixed; inset:0;
+    background:
+        radial-gradient(ellipse 60% 50% at 50% 40%, rgba(180,148,90,0.08) 0%, transparent 60%);
+    pointer-events:none;
+}
+.box {
+    position:relative;
+    max-width: 480px;
+}
+.icon {
+    font-size: 48px;
+    margin-bottom: 24px;
+    display:block;
+    animation: popIn 0.6s cubic-bezier(0.34,1.56,0.64,1) both;
+}
+@keyframes popIn {
+    from{transform:scale(0);opacity:0;}
+    to{transform:scale(1);opacity:1;}
+}
+.divider {
+    width: 60px; height: 1px;
+    background: linear-gradient(90deg, transparent, #b8935a, transparent);
+    margin: 20px auto;
+}
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem; font-weight: 600;
+    color: #d4af70; letter-spacing: 0.02em;
+    animation: fadeUp 0.6s 0.2s ease both;
+}
+p {
+    font-size: 15px; font-weight: 300;
+    color: rgba(210,200,185,0.6);
+    line-height: 1.7; margin-top: 14px;
+    animation: fadeUp 0.6s 0.35s ease both;
+}
+a {
+    display: inline-block;
+    margin-top: 32px;
+    padding: 12px 28px;
+    border-radius: 30px;
+    background: linear-gradient(135deg,#b8935a,#9a7540);
+    color: #0a0c10; font-weight: 600;
+    text-decoration: none; font-size: 13px;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    transition: filter 0.2s, transform 0.15s;
+    animation: fadeUp 0.6s 0.5s ease both;
+}
+a:hover { filter:brightness(1.12); transform:translateY(-2px); }
+@keyframes fadeUp {
+    from{opacity:0;transform:translateY(16px);}
+    to{opacity:1;transform:translateY(0);}
+}
+footer {
+    position:fixed; bottom:20px; left:0; right:0;
+    font-size:11px; color:rgba(180,148,90,0.2);
+    letter-spacing:0.08em; text-transform:uppercase;
+}
+</style>
+</head>
+<body>
+<div class="box">
+    <span class="icon">✦</span>
+    <h1>Thank You.</h1>
+    <div class="divider"></div>
+    <p>Your request has been received. One of our senior advisors will be in touch within <strong style="color:#d4af70;font-weight:500">24 hours</strong> to arrange your private strategy session.</p>
+    <a href="index.html">← Return to Aether Agency</a>
+</div>
+<footer>© 2026 Aether Agency · AI Real Estate Systems</footer>
+</body>
+</html>
